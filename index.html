@@ -18,7 +18,7 @@
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
 
-  <script src="platform-reveal/countup.js"></script>
+  <script src="platform-reveal/classer.js"></script>
 
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
@@ -163,7 +163,7 @@
         </ol>
       </section>
       <section>
-        Community (needs pic)
+        <img src="assets/drupalcon-portland-group-photo.jpg" alt="DrupalCon Portland" style="width: 100%;" />
         <aside class="notes">
           <ul>
             <li>Often corporate backed, not always</li>
@@ -185,7 +185,44 @@
     </section>
     <section>
       <section>
-        <h2>Economic</h2>
+        <h2>Ethical benefits</h2>
+        <aside class="notes">
+          <ul>
+            <li>Mostly Free Software angle</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h3>1st Moral Principle of the web</h3>
+        <blockquote>When a computer receives conflicting instructions from its owner and from a remote party, the owner always wins.</blockquote>
+        <p>&mdash;Cory Doctorow, <a href="http://boingboing.net/2016/06/24/how-to-protect-the-future-web.html">How to protect the future web from its foundres own frailty</a></p>
+        <aside class="notes">
+          <ul>
+            <li>Said in 2016, but concept goes back to beginning</li>
+            <li>People have a right to digital self-sovereignty</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <blockquote>Software you can't control controls you.</blockquote>
+      </section>
+      <section>
+        <h2>Government?</h2>
+        <p class="bigtext fragment">In a democracy, the people own the government</p>
+        <p class="bigtext fragment">The people own the government's code already</p>
+      </section>
+      <section>
+        <blockquote>Open Source is a public good</blockquote>
+        <aside class="notes">
+          <ul>
+            <li>Just like roads, bridges, etc.</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>Economic benefits</h2>
       </section>
       <section>
         <p class="bigtext">What is your business?</p>
@@ -250,14 +287,14 @@
         <h3>Open Source Syndrome</h3>
         <blockquote>
           Most open source projects subconsciously evolve to be interesting and desireable for developers first,
-          then everyone else second. Editors and marketeres are often the second-class citizen in these cases.
+          then everyone else second. Editors and marketers are often the second-class citizen in these cases.
         </blockquote>
         <p>&mdash;<em>Web Content Management</em> by Deane Barker</p>
       </section>
       <section>
         <h3>Commercial Software Syndrome</h3>
         <blockquote>
-          <p>Many proprietary CMDs have very polished demos, butthat polish is only skin deep. The slick UI hides
+          <p>Many proprietary CMDs have very polished demos, but that polish is only skin deep. The slick UI hides
           a lack of underlying power and flexibility&mdash;crucial power and flexibility that open source developers
             find interesting to work on.</p>
         </blockquote>
@@ -276,6 +313,17 @@
         </aside>
       </section>
       <section>
+        <img src="assets/xfree86-logo.gif" alt="XFree86 - The former X Windows server" />
+        <aside class="notes">
+          <ul>
+            <li>Was MIT licensed</li>
+            <li>Maintainer inactive, uncooperative</li>
+            <li>2004, tried to relicense with public credit clause</li>
+            <li>All vendors joined a recent fork, left, problem solved</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
         <h3><q>But who will I sue?</q></h3>
         <p><img src="assets/hello-sue.jpg" alt="Hello, I'm suing you" data-credit="https://www.eremedia.com/tlnt/hr-101-these-four-hr-mistakes-are-causing-the-most-lawsuits/" /> </p>
         <p class="fragment bigtext">You didn't read your EULA...</p>
@@ -286,6 +334,83 @@
             <li>Responsibility avoidance; bad culture, not bad software.</li>
           </ul>
         </aside>
+      </section>
+      <section>
+        <h3><q>But who will I call at 2 am?</q></h3>
+        <p class="fragment bigtext">Whoever you're paying to be awake at 2 am.</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>Security benefits</h2>
+        <aside class="notes">
+          <ul>
+            <li>Plenty of good and bad OSS and proprietary</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <blockquote>Popular Open Source software tends to be secure because insecure Open Source software tends to get unpopular fast.</blockquote>
+        <p>&mdash;Chris Messina, DrupalCon DC, 2009</p>
+        <aside class="notes">
+          <ul>
+            <li>Can look inside and run in fear</li>
+            <li>If 1% of people do so, everyone knows to run</li>
+            <li>Also, code is known quantity</li>
+            <li>Asked sec researcher once OSS vs proprietary</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <blockquote>Why is there a copy of Doom in my spreadsheet?</blockquote>
+        <div class="fragment">
+          <img src="assets/excel-95-hall-of-tortured-souls.jpg" alt="There is a Doom clone in Excel 95" data-credit="http://eeggs.com/items/719.html" />
+          <p>The Hall of Tortured Souls</p>
+        </div>
+        <aside class="notes">
+          <ul>
+            <li>Playable mini-game in Excel 95</li>
+            <li>Developer credits</li>
+            <li>... How many security holes does it have?</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Linus' Law</h2>
+        <p><q>Given enough eyeballs, all bugs are shallow</q></p>
+        <p class="fragment">Only true for <a href="https://freedom-to-tinker.com/2013/10/09/the-linux-backdoor-attempt-of-2003/">malicious code</a></p>
+      </section>
+      <section>
+        <p class="bigtext">Anyone <em>can</em> audit the code; not everyone <em>does</em>.</p>
+        <h2 class="fragment" style="margin-top: 1em;"><a href="https://en.wikipedia.org/wiki/Diffusion_of_responsibility">Diffusion of Responsibility</a></h2>
+        <aside class="notes">
+          <ul>
+            <li>AKA Bystander Effect</li>
+            <li>Open Source isn't more secure; it's more auditable, which may make it more secure</li>
+            <li>Still trust OSS more, checks malicious code</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h3>Fix your own <span id="bugs">bugs</span> <span class="fragment" data-classer="bugs" data-classer-class="struck">malicious code</span></h3>
+      </section>
+      <section>
+        <h3><q>Security is a process, not a product</q></h3>
+        <blockquote>... the only way to effectively do business in an insecure world is to put processes in place that recognize the inherent insecurity in the products.</blockquote>
+        <p>&mdash;<a href="https://www.schneier.com/crypto-gram/archives/2000/0515.html">Bruce Schneider</a>, 2000</p>
+      </section>
+      <section>
+        <blockquote>
+          I consider the Drupal security team one of the best I've encountered in OSS. They are on the ball,
+          quick to respond, and know their stuff. In general, Drupal is far more secure for it. They promote
+          good practices (in general).
+        </blockquote>
+        <p>&mdash;<a href="http://blog.ircmaxell.com/2014/10/a-lesson-in-security.html">Anthony Ferrara</a>, Google and NBC Universal, after Drupalgeddon</p>
+      </section>
+    </section>
+    <section>
+      <section>
+
       </section>
     </section>
 
@@ -313,7 +438,7 @@
       * Chris Messina: Popular OSS tends to be secure because insecure OSS tends to get unpopular fast.
       * Can inspect it: Safety against malicious code
       * "OSS isn't more secure. OSS is more auditable, which makes it secure in the long run."
-      * Not just code, but process.  Varies widely. (Drupal is excellent.) Mention Kalabox (or whoever they were?)
+      * Not just code, but process.  Varies widely. (Drupal is excellent.) Mention Kalamuna (or whoever they were?)
       * https://www.amnesty.org/en/latest/campaigns/2015/08/how-governments-are-using-spyware-to-attack-free-speech/
 
       Ethical
@@ -332,6 +457,7 @@
       * Have a say.  No investment, no say.
 
       Conclusion
+      * Open Source is only as awesome as the people behind it
       * Open Source isn't a license. It's a culture
       * Open Source is interactive. You don't matter unless you interact.
 
