@@ -48,7 +48,9 @@
     }
 
     .reveal h2 + p.bigtext,
-    .reveal p + p {
+    .reveal p + p,
+    .reveal p + ol,
+    .reveal h3 + p {
       margin-top: 1em;
     }
 
@@ -335,7 +337,7 @@
       </section>
       <section>
         <h3><q>But who will I sue?</q></h3>
-        <p><img src="assets/hello-sue.jpg" alt="Hello, I'm suing you" data-credit="https://www.eremedia.com/tlnt/hr-101-these-four-hr-mistakes-are-causing-the-most-lawsuits/" /> </p>
+        <p><img src="assets/hello-sue.jpg" alt="Hello, I'm suing you" style="border-radius: 40px" data-credit="https://www.eremedia.com/tlnt/hr-101-these-four-hr-mistakes-are-causing-the-most-lawsuits/" /> </p>
         <p class="fragment bigtext">You didn't read your EULA...</p>
         <aside class="notes">
           <ul>
@@ -348,6 +350,11 @@
       <section>
         <h3><q>But who will I call at 2 am?</q></h3>
         <p class="fragment bigtext">Whoever you're paying to be awake at 2 am.</p>
+        <aside class="notes">
+          <ul>
+            <li>Someone in IRC, if lucky?</li>
+          </ul>
+        </aside>
       </section>
     </section>
     <section>
@@ -375,7 +382,7 @@
         <blockquote>Why is there a copy of Doom in my spreadsheet?</blockquote>
         <div class="fragment">
           <img src="assets/excel-95-hall-of-tortured-souls.jpg" alt="There is a Doom clone in Excel 95" data-credit="http://eeggs.com/items/719.html" />
-          <p>The Hall of Tortured Souls</p>
+          <p><q>The Hall of Tortured Souls</q></p>
         </div>
         <aside class="notes">
           <ul>
@@ -394,6 +401,7 @@
             <li>Companies want to spy on their users</li>
             <li>Hostile hackers want to capture data</li>
             <li>Govt intel agencies want to spy on everyone</li>
+            <li>Goes back to 1st moral principle</li>
           </ul>
         </aside>
       </section>
@@ -410,6 +418,11 @@
       </section>
       <section>
         <h3>Fix your own <span id="bugs">bugs</span> <span class="fragment" data-classer="bugs" data-classer-class="struck">malicious code</span></h3>
+        <aside class="notes">
+          <ul>
+            <li>Only need 1 person to find/remove/publicize malicious code</li>
+          </ul>
+        </aside>
       </section>
       <section>
         <h3><q>Security is a process, not a product</q></h3>
@@ -441,7 +454,8 @@
         <h2>Fight Diffusion of Responsibility</h2>
         <aside class="notes">
           <ul>
-            <li>Passive user of OSS is OK!</li>
+            <li>Passive use of OSS is OK!</li>
+            <li>No obligation to you, either</li>
           </ul>
         </aside>
       </section>
@@ -458,6 +472,12 @@
       </section>
       <section>
         <h2>Open Source is a Gift Economy</h2>
+        <aside class="notes">
+          <ul>
+            <li>Reputation matters</li>
+            <li>People will help the helpful</li>
+          </ul>
+        </aside>
       </section>
       <section>
         <h3>Developer time</h3>
@@ -477,9 +497,17 @@
       <section>
         <h3>Help with more than just code</h3>
         <p class="fragment">Documentation</p>
+        <p class="fragment">Usability/UX</p>
         <p class="fragment">Graphic design</p>
         <p class="fragment">Web site</p>
         <p class="fragment">Events</p>
+        <aside class="notes">
+          <ul>
+            <li>Make it an offer, not an order</li>
+            <li>Ask what help is needed before offering</li>
+            <li>Relationship matters!</li>
+          </ul>
+        </aside>
       </section>
       <section>
         <h3>Engage the developer</h3>
@@ -487,6 +515,7 @@
         <aside class="notes">
           <ul>
             <li>If you offer money, you do get to negotiate features</li>
+            <li>Very selfish, good!</li>
           </ul>
         </aside>
       </section>
@@ -512,8 +541,10 @@
         </aside>
       </section>
       <section>
-        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">»Why would anyone pay programmers to work on free software?«<br>»I don&#39;t understand. Why would anyone pay workers to build public roads?«</p>&mdash; ❦ (@daniel_bohrer) <a href="https://twitter.com/daniel_bohrer/status/815661219340226560">January 1, 2017</a></blockquote>
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">»Why would anyone pay programmers to work on free software?«<br>»I don&#39;t understand. Why would anyone pay workers to build public roads?«</p>&mdash; ❦ (@daniel_bohrer) <a href="https://twitter.com/daniel_bohrer/status/815661219340226560">January 1, 2017</a></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </section>
     </section>
     <section>
@@ -527,13 +558,20 @@
       </section>
       <section>
         <h3><a href="http://www.garfieldtech.com/blog/pay-it-forward">Pay It Forward</a></h3>
+        <aside class="notes">
+          <ul>
+            <li>Positive feedback loop</li>
+            <li>Invest in peers, they invest back</li>
+            <li>Individual and company</li>
+          </ul>
+        </aside>
       </section>
       <section>
         <img src="assets/oss-awesome.jpg" width="100%" alt="Open Source is only as awesome as the people in it" data-credit="https://memegenerator.net/instance/74639575" />
         <p class="fragment bigtext">Open Source is only as awesome as you are</p>
       </section>
       <section>
-        <img src="assets/keep-calm-and-be-awesome-427.png" alt="Keep Calm and Be Awesome" data-credit="http://customerservicelife.com/no-ones-perfect-but-everyone-can-be-awesome/" />
+        <img src="assets/keep-calm-and-be-awesome-427.png" style="width: 50%;" alt="Keep Calm and Be Awesome" data-credit="http://customerservicelife.com/no-ones-perfect-but-everyone-can-be-awesome/" />
       </section>
     </section>
 
