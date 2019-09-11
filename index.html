@@ -2,111 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <title>Why Free Software?</title>
-  <meta name="author" content="Larry Garfield">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="platform-reveal/platform-theme/assets/css/styles.css" id="theme">
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <!--	<link rel="stylesheet" href="css/theme/black.css">-->
+
+  <link rel="stylesheet" href="platform/platformsh.css" />
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai.css">
+
   <!-- Printing and PDF exports -->
   <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'platform-theme/assets/css/print/pdf.css' : 'platform-theme/assets/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
 
-  <script src="platform-reveal/classer.js"></script>
-
-  <!--[if lt IE 9]>
-  <script src="lib/js/html5shiv.js"></script>
-  <![endif]-->
-
-  <style type="text/css">
-
-    img.graphic {
-    }
-
-    ul.inline {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      text-align: center;
-    }
-
-    ul.inline li {
-      display: inline;
-    }
-
-    /*overwrites a default style that
-    vertically un-centered slides */
-    .reveal .slides>section,
-    .reveal .slides>section>section {
-      padding: 0;
-    }
-
-    .reveal h2 + p.bigtext,
-    .reveal p + p,
-    .reveal p + ol,
-    .reveal h3 + p {
-      margin-top: 1em;
-    }
-
-    .reveal #final p + p {
-      margin-top: 0;
-    }
-
-    .struck {
-      text-decoration: line-through;
-    }
-
-    p.bigdeal {
-      font-size: 200%;
-      color: Red;
-      font-style: italic;
-      text-shadow: 3px 3px 10px #990000;
-      display: block;
-    }
-
-    img.screenshot {
-      border-radius: 5px;
-      width: 900px;
-    }
-
-    blockquote em {
-      color: Green;
-      font-weight: bold !important;
-    }
-  </style>
-
 </head>
-<!-- Change body class to "dark" if you prefer a dark theme, or "light" if you'd rather have a light theme-->
-<body class="light">
+<body class="skin-blue">
 <div class="reveal">
-  <div class="logo">
-    <p>Platform.sh</p>
-  </div>
-  <!-- Any section element inside of this container is displayed as a slide -->
+  <footer>
+    <img class="logo" src="platform/logos/platformsh-logo-black.svg" alt="Platform.sh" />
+    <span class="name">@Crell</span>
+  </footer>
   <div class="slides">
 
     <section>
       <h2>Why Free Software?</h2>
-      <p>
-        <small>Presented by <a href="http://www.garfieldtech.com/">Larry Garfield</a> (<a href="http://twitter.com/Crell">@Crell</a>)</small>
-      </p>
     </section>
 
-    <section class="l-2up">
-      <h2><a href="http://twitter.com/Crell">@Crell</a></h2>
-      <div>
+    <section id="presenter">
+      <h2>Larry Garfield</h2>
+      <h2><a href="https://twitter.com/Crell">@Crell</a></h2>
+      <div class="layout-col vcentered">
         <img src="assets/larry-olaf-hug.jpg" alt="Larry implements Huggable" style="width: 350px; margin: 0" />
-      </div>
-      <div>
         <ul style="text-wrap: none">
           <li>Director of DX, <a href="http://www.platform.sh/">Platform.sh</a></li>
-          <li style="margin-top: 1em;">Core Committee, <a href="http://www.php-fig.org/">PHP-FIG</a></li>
+          <li style="margin-top: 1em;">PHP-FIG Core Committee</li>
           <li style="margin-top: 1em;"><code>implements Huggable</code></li>
         </ul>
       </div>
@@ -125,7 +63,7 @@
         <h2>What is Open Source, anyway?</h2>
       </section>
       <section>
-        <h3>Free Software, 1984</h3>
+        <h2>Free Software, 1984</h2>
         <div class="fragment">
           <p><img src="assets/stallman-crell-nyccamp2015.jpg" width="60%" alt="Crell and Richard Stallman, 2015" /></p>
           <p>Richard Stallman, 2015</p>
@@ -137,18 +75,20 @@
         </aside>
       </section>
       <section>
-        <h3>Free Software Definition</h3>
-        <ol start="0">
-          <li class="fragment">The freedom to run the program as you wish, for any purpose.</li>
-          <li class="fragment">The freedom to study how the program works, and change it so it does your computing as you wish.</li>
-          <li class="fragment">The freedom to redistribute copies so you can help your neighbor.</li>
-          <li class="fragment">The freedom to distribute copies of your modified versions to others.</li>
-        </ol>
-        <blockquote class="fragment">Use, Learn, Improve, Share</blockquote>
+        <div class="layout-stacked" style="height: 600px;">
+          <h3>Free Software Definition</h3>
+          <ol start="0">
+            <li class="fragment">The freedom to run the program as you wish, for any purpose.</li>
+            <li class="fragment">The freedom to study how the program works, and change it so it does your computing as you wish.</li>
+            <li class="fragment">The freedom to redistribute copies so you can help your neighbor.</li>
+            <li class="fragment">The freedom to distribute copies of your modified versions to others.</li>
+          </ol>
+          <blockquote class="fragment">Use, Learn, Improve, Share</blockquote>
+        </div>
       </section>
       <section>
         <h2>Free Software Foundation, 1985</h2>
-        <p class="bigtext fragment">GNU's Not Unix</p>
+        <p class="oversize fragment">GNU's Not Unix</p>
         <aside class="notes">
           <ul>
             <li>circa 1991, Linux</li>
@@ -239,26 +179,31 @@
         <h2>Ethical benefits</h2>
       </section>
       <section>
-        <blockquote>If the users don’t control the program, the program controls the users.</blockquote>
-        <p>&mdash;Richard Stallman, "Free Software, Free Society", Page 30</p>
+        <aside class="quote">
+          <blockquote>If the users don’t control the program,<br />the program controls the users.</blockquote>
+          <cite>Richard Stallman, "Free Software, Free Society", Page 30</cite>
+        </aside>
       </section>
       <section>
-        <h3>1st Moral Principle of the web</h3>
-        <blockquote>When a computer receives conflicting instructions from its owner and from a remote party, the owner always wins.</blockquote>
-        <p>&mdash;Cory Doctorow, Former EFF Director</p>
+        <aside class="quote">
+        <h2>1st Moral Principle of the web</h2>
+          <blockquote>When a computer receives conflicting instructions from its owner and from a remote party, the owner always wins.</blockquote>
+          <cite>Cory Doctorow, Former EFF Director</cite>
+        </aside>
         <p><a href="http://boingboing.net/2016/06/24/how-to-protect-the-future-web.html">How to protect the future web</a></p>
         <aside class="notes">
           <ul>
             <li>Said in 2016, but concept goes back to beginning</li>
             <li>People have a right to digital self-sovereignty</li>
+            <li>Requires code access to ensure it. No access, no control</li>
           </ul>
         </aside>
       </section>
       <!--
       <section>
         <h2>Government?</h2>
-        <p class="bigtext fragment">In a democracy, the people own the government</p>
-        <p class="bigtext fragment">The people own the government's code already</p>
+        <p class="oversize fragment">In a democracy, the people own the government</p>
+        <p class="oversize fragment">The people own the government's code already</p>
       </section>
       <section>
         <blockquote>Public agencies <em>exist for the people</em>, not for themselves. When they do computing, they do it
@@ -272,6 +217,13 @@
           <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">»Why would anyone pay programmers to work on free software?«<br>»I don&#39;t understand. Why would anyone pay workers to build public roads?«</p>&mdash; ❦ (@daniel_bohrer) <a href="https://twitter.com/daniel_bohrer/status/815661219340226560">January 1, 2017</a></blockquote>
           <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
+        <aside class="notes">
+          <ul>
+            <li>Building a common good</li>
+            <li>All OSS is a commons, by design</li>
+            <li>The commons is necessary for civic life</li>
+          </ul>
+        </aside>
       </section>
     </section>
     <section>
@@ -279,7 +231,7 @@
         <h2>Economic benefits</h2>
       </section>
       <section>
-        <p class="bigtext">What is your business?</p>
+        <p class="oversize">What is your business?</p>
         <p class="fragment">Tip: It's probably not software</p>
         <aside class="notes">
           <ul>
@@ -291,8 +243,10 @@
         </aside>
       </section>
       <section>
-        <blockquote>The most radical possible solution for constructing software is not to<br />construct it at all.</blockquote>
-        <p>&mdash;Fred Brooks, <em>No Silver Bullet</em>, 1986</p>
+        <aside class="quote">
+          <blockquote>The most radical possible solution for constructing software is not to<br />construct it at all.</blockquote>
+          <cite>Fred Brooks, <em>No Silver Bullet</em>, 1986</cite>
+        </aside>
         <p>Author, <em>The Mythical Man-Month</em></p>
         <aside class="notes">
           <ul>
@@ -330,7 +284,7 @@
       </section>
       -->
       <section>
-        <p class="bigtext">Per-item licensing restricts<br />development options</p>
+        <p class="oversize">Per-item licensing restricts<br />development options</p>
         <aside class="notes">
           <ul>
             <li>No wasted time counting licenses</li>
@@ -340,12 +294,14 @@
         </aside>
       </section>
       <section>
-        <h3>What motivates developers?</h3>
-        <blockquote>For many developers, peer review and acclaim is important, so it's likely that
-          they will prefer to build software that is admired by their peers. <em>Highly prized factors
-            are clean design, reliability and maintainability</em>, with adherence to standards and
-          shared community values preeminent.</blockquote>
-        <p>&mdash;<em>Benefits of Using Open Source Software</em>, <a href="http://open-source.gbdirect.co.uk/migration/benefit.html">GBDirect</a></p>
+        <h2>What motivates developers?</h2>
+        <aside class="quote">
+          <blockquote>For many developers, peer review and acclaim is important, so it's likely that
+            they will prefer to build software that is admired by their peers. <em>Highly prized factors
+              are clean design, reliability and maintainability</em>, with adherence to standards and
+            shared community values preeminent.</blockquote>
+          <cite><em>Benefits of Using Open Source Software</em>, <a href="http://open-source.gbdirect.co.uk/migration/benefit.html">GBDirect</a></cite>
+        </aside>
         <aside class="notes">
           <ul>
             <li>Proprietary devs fix bugs when costs them money</li>
@@ -354,30 +310,34 @@
         </aside>
       </section>
       <section>
-        <h3>Open Source Syndrome</h3>
-        <blockquote>
-          Most open source projects subconsciously evolve to be interesting and desireable for developers first,
-          then everyone else second. Editors and marketers are often the second-class citizen in these cases.
-        </blockquote>
-        <p>&mdash;<em>Web Content Management</em> by Deane Barker</p>
+        <h2>Open Source Syndrome</h2>
+        <aside class="quote">
+          <blockquote>
+            Most open source projects subconsciously evolve to be interesting and desireable for developers first,
+            then everyone else second. Editors and marketers are often the second-class citizen in these cases.
+          </blockquote>
+          <cite><em>Web Content Management</em> by Deane Barker</cite>
+        </aside>
       </section>
       <section>
-        <h3>Commercial Software Syndrome</h3>
-        <blockquote>
-          <p>Many proprietary CMSs have very polished demos, but <em>that polish is only skin deep</em>. The slick UI hides
-          a lack of underlying power and flexibility&mdash;crucial power and flexibility that open source developers
-            find interesting to work on.</p>
-        </blockquote>
-        <p>&mdash;Me, as quoted in <em>Web Content Management</em> by Deane Barker</p>
+        <h2>Commercial Software Syndrome</h2>
+        <aside class="quote">
+          <blockquote>
+            Many proprietary CMSs have very polished demos, but <em>that polish is only skin deep</em>. The slick UI hides
+            a lack of underlying power and flexibility&mdash;crucial power and flexibility that open source developers
+            find interesting to work on.
+          </blockquote>
+          <cite>Me, as quoted in <em>Web Content Management</em> by Deane Barker</cite>
+        </aside>
         <aside class="notes">
           <ul>
-            <li>Plenty of counter-examples (PHPStorm, Drupal, WP)</li>
+            <li>Plenty of counter-examples (PHPStorm, TYPO3, WP)</li>
           </ul>
         </aside>
       </section>
       <section>
         <h3>"Take your business elsewhere"</h3>
-        <p><img src="assets/take-your-business-elsewhere-dog.png" style="width: 50%" alt="And your dog, too" data-credit="http://www.dogpoopsigns.com/please-take-your-business-elsewhere-sign/sku-k-0230" /></p>
+        <p><img src="assets/take-your-business-elsewhere-dog.png" style="max-height: 600px" alt="And your dog, too" data-credit="http://www.dogpoopsigns.com/please-take-your-business-elsewhere-sign/sku-k-0230" /></p>
         <aside class="notes">
           <ul>
             <li>Including yourself! Can add feature yourself</li>
@@ -389,7 +349,7 @@
         </aside>
       </section>
       <section>
-        <div style="display: flex; justify-content: space-around">
+        <div class="layout-col">
           <img src="assets/mysql-logo.png" alt="MySQL" width="250px" />
           <img class="fragment" src="assets/mariadb-logo.png" alt="MariaDB" width="250px" />
         </div>
@@ -403,9 +363,9 @@
         </aside>
       </section>
       <section>
-        <div style="display: flex; justify-content: space-around; flex-direction: column; align-items: center">
-          <a href="https://owncloud.com/"><img src="assets/owncloud-logo.png" alt="ownCloud" width="629px" /></a>
-          <a href="https://www.nextcloud.com/" class="fragment" ><img src="assets/nextcloud-logo.png" alt="nextCloud" width="400px"  /></a>
+        <div class="layout-stacked" style="height: 650px;">
+          <p><a href="https://owncloud.com/"><img src="assets/owncloud-logo.png" alt="ownCloud" width="400px" /></a></p>
+          <p><a href="https://www.nextcloud.com/" class="fragment" ><img src="assets/nextcloud-logo.png" alt="nextCloud" width="350px" /></a></p>
         </div>
         <aside class="notes">
           <ul>
@@ -417,7 +377,7 @@
         </aside>
       </section>
       <section>
-        <div style="display: flex; justify-content: space-around; align-items: center">
+        <div class="layout-col vcentered">
           <a href="https://www.libreoffice.org/"><img src="assets/libreoffice-logo.png" width="300px" alt="LibreOffice" /></a>
           <a href="https://www.x.org/"><img src="assets/xorg-logo.svg" width="300px" alt="X.org" /></a>
           <a href="https://www.backdropcms.org/"><img src="assets/backdrop-logo.png" width="300px" alt="Backdrop CMS" /></a>
@@ -432,7 +392,7 @@
       <section>
         <h3><q>But who will I sue?</q></h3>
         <p><img src="assets/hello-sue.jpg" alt="Hello, I'm suing you" style="border-radius: 40px" data-credit="https://www.eremedia.com/tlnt/hr-101-these-four-hr-mistakes-are-causing-the-most-lawsuits/" /> </p>
-        <p class="fragment bigtext">You didn't read your EULA...</p>
+        <p class="fragment oversize">You didn't read your EULA...</p>
         <aside class="notes">
           <ul>
             <li>EULAs forbid that anyway</li>
@@ -442,8 +402,10 @@
         </aside>
       </section>
       <section>
-        <h3><q>But who will I call at 2 am?</q></h3>
-        <p class="fragment bigtext">Whoever you're paying to be awake at 2 am.</p>
+        <div class="layout-stacked" style="height: 400px;">
+          <h3><q>But who will I call at 2 am?</q></h3>
+          <p class="fragment oversize">Whoever you're paying to be awake at 2 am.</p>
+        </div>
         <aside class="notes">
           <ul>
             <li>Someone in IRC, if lucky?</li>
@@ -461,8 +423,10 @@
         </aside>
       </section>
       <section>
-        <blockquote>Popular Open Source software tends to be secure because insecure Open Source software tends to get unpopular fast.</blockquote>
-        <p>&mdash;Chris Messina, Google, inventor of #Hashtags, DrupalCon DC, 2009</p>
+        <aside class="quote">
+          <blockquote>Popular Open Source software tends to be secure because insecure Open Source software tends to get unpopular fast.</blockquote>
+          <cite>Chris Messina, Google, inventor of #Hashtags, DrupalCon DC, 2009</cite>
+        </aside>
         <aside class="notes">
           <ul>
             <li>Can look inside and run in fear</li>
@@ -473,7 +437,9 @@
         </aside>
       </section>
       <section>
-        <blockquote>Why is there a copy of Doom in my spreadsheet?</blockquote>
+        <aside class="quote">
+          <blockquote>Why is there a copy of Doom<br />in my spreadsheet?</blockquote>
+        </aside>
         <div class="fragment">
           <img src="assets/excel-95-hall-of-tortured-souls.jpg" alt="There is a Doom clone in Excel 95" data-credit="http://eeggs.com/items/719.html" />
           <p><q>The Hall of Tortured Souls</q></p>
@@ -487,16 +453,26 @@
         </aside>
       </section>
       <section>
-        <blockquote>Proprietary software has no security at all in one crucial case&mdash;against its developer. And the
-          developer may help others attack. <em>Microsoft shows Windows bugs to the NSA</em> (the US government digital
-          spying agency) <em>before fixing them</em>.</blockquote>
-        <p>&mdash;"Free Software, Free Society", Page 31, Richard Stallman</p>
+        <aside class="quote">
+          <blockquote>Proprietary software has no security at all in one crucial case&mdash;against its developer. And the
+            developer may help others attack. <em>Microsoft shows Windows bugs to the NSA</em> (the US government digital
+            spying agency) <em>before fixing them</em>.</blockquote>
+          <cite>"Free Software, Free Society", Page 31, Richard Stallman</cite>
+        </aside>
         <p style="margin-top: 2em;">Source: Sean Gallagher, "<a href="http://arstechnica.com/security/2013/06/nsa-getsearly-access-to-zero-day-data-from-microsoft-others/">NSA Gets Early Access to Zero-Day Data from Microsoft</a>, Others," 14 June 2013</p>
+        <aside class="notes">
+          <ul>
+            <li>What % of mobile apps are spyware?</li>
+            <li>Seemingly > 50%</li>
+          </ul>
+        </aside>
       </section>
       <section>
-        <h2>Linus' Law</h2>
-        <p><q>Given enough eyeballs, all bugs are shallow</q></p>
-        <p class="fragment">Only true for <a href="https://freedom-to-tinker.com/2013/10/09/the-linux-backdoor-attempt-of-2003/">malicious code</a></p>
+        <div class="layout-stacked" style="height: 500px">
+          <h2>Linus' Law</h2>
+          <p><q>Given enough eyeballs, all bugs are shallow</q></p>
+          <p class="fragment">Only true for <a href="https://freedom-to-tinker.com/2013/10/09/the-linux-backdoor-attempt-of-2003/">malicious code</a></p>
+        </div>
         <aside class="notes">
           <ul>
             <li>Companies want to spy on their users</li>
@@ -507,7 +483,7 @@
         </aside>
       </section>
       <section>
-        <p class="bigtext">Anyone <em>can</em> audit the code;<br />not everyone <em>does</em>.</p>
+        <p class="oversize">Anyone <em>can</em> audit the code;<br />not everyone <em>does</em>.</p>
         <h2 class="fragment" style="margin-top: 1em;"><a href="https://en.wikipedia.org/wiki/Diffusion_of_responsibility">Diffusion of Responsibility</a></h2>
         <aside class="notes">
           <ul>
@@ -526,10 +502,18 @@
         </aside>
       </section>
       <section>
-        <h3><q>Security is a process, not a product</q></h3>
-        <blockquote>... the only way to effectively do business in an insecure world is to put processes in place that
-          recognize the inherent insecurity in the products.</blockquote>
-        <p>&mdash;<a href="https://www.schneier.com/crypto-gram/archives/2000/0515.html">Bruce Schneider</a>, Security researcher, CTO of Resilient, 2000</p>
+        <h2><q>Security is a process, not a product</q></h2>
+        <aside class="quote">
+          <blockquote>... the only way to effectively do business in an insecure world is to put processes in place that
+            recognize the inherent insecurity in<br />the products.</blockquote>
+          <cite><a href="https://www.schneier.com/crypto-gram/archives/2000/0515.html">Bruce Schneider</a>, Security researcher, CTO of Resilient, 2000</cite>
+        </aside>
+        <aside class="notes">
+          <ul>
+            <li>Transparent code begets transparent security process</li>
+            <li>Harder to have "secret sec fixes" if code is visible</li>
+          </ul>
+        </aside>
       </section>
       <!--
       <section>
@@ -564,9 +548,11 @@
         </aside>
       </section>
       <section>
-        <p><q>If you're not paying for it, you are the product.</q></p>
-        <p class="fragment">If you're not paying for it, I don't care what you think</p>
-        <p class="fragment">("Pay" doesn't always mean money)</p>
+        <div class="layout-stacked" style="height: 400px;">
+          <p><q>If you're not paying for it, you are the product.</q></p>
+          <p class="fragment">If you're not paying for it, you don't matter.</p>
+          <p class="fragment">("Pay" doesn't always mean money)</p>
+        </div>
         <aside class="notes">
           <ul>
             <li>Pay in bragging rights</li>
@@ -585,7 +571,7 @@
       </section>
       <section>
         <h3>Developer time</h3>
-        <p class="fragment bigtext">Time is the currency of Free Software</p>
+        <p class="fragment oversize">Time is the currency of Free Software</p>
         <ol>
           <li class="fragment">Review more code than you write!</li>
           <li class="fragment">Fix more bugs than you add features!</li>
@@ -615,7 +601,7 @@
       </section>
       <section>
         <h3>Engage the developer</h3>
-        <p class="fragment bigtext">Many maintainers are freelancers</p>
+        <p class="fragment oversize">Many maintainers are freelancers</p>
         <aside class="notes">
           <ul>
             <li>If you offer money, you do get to negotiate features</li>
@@ -626,7 +612,7 @@
       </section>
       <section>
         <h3>Hire the/a developer</h3>
-        <p class="fragment bigtext">This does not give you absolute control!</p>
+        <p class="fragment oversize">This does not give you absolute control!</p>
       </section>
       <section>
         <blockquote>If it's business critical, you need full time staff.</blockquote>
@@ -648,8 +634,10 @@
         </aside>
       </section>
       <section>
-        <h3>Be invested</h3>
-        <blockquote class="fragment">Free Software is not about getting cheap stuff</blockquote>
+        <div class="layout-stacked" style="height: 300px;">
+          <h3>Be invested</h3>
+          <blockquote class="fragment">Free Software is not about getting cheap stuff</blockquote>
+        </div>
         <aside class="notes">
           <ul>
             <li>No investment, no say</li>
@@ -662,12 +650,12 @@
     </section>
     <section>
       <section>
-        <p class="bigtext">Free Software isn't a license, it's a culture</p>
-        <p class="bigtext fragment">Participation culture,<br />not Permission culture</p>
+        <p class="oversize">Free Software isn't a license, it's a culture</p>
+        <p class="oversize fragment"><em>Participation</em> culture, not <em>Permission</em> culture</p>
       </section>
       <section>
-        <p class="bigtext">Free Software is interactive</p>
-        <p class="fragment bigtext">If you don't interact, you don't matter</p>
+        <p class="oversize">Free Software is interactive</p>
+        <p class="fragment oversize">If you don't interact, you don't matter</p>
       </section>
       <section>
         <h3><a href="http://www.garfieldtech.com/blog/pay-it-forward">Pay It Forward</a></h3>
@@ -681,7 +669,8 @@
       </section>
       <section>
         <img src="assets/fs-awesome.jpg" width="100%" alt="Free Software is only as awesome as the people in it" data-credit="https://memegenerator.net/instance/74639575" />
-        <p class="fragment bigtext">Free Software is only as<br />awesome as you are</p>
+        <p><br /></p>
+        <p class="fragment oversize">Free Software is only as<br />awesome as you are</p>
       </section>
       <section>
         <img src="assets/keep-calm-and-be-awesome-427.png" style="width: 50%;" alt="Keep Calm and Be Awesome" data-credit="http://customerservicelife.com/no-ones-perfect-but-everyone-can-be-awesome/" />
@@ -747,38 +736,32 @@
       <p>Continuous Deployment Cloud Hosting</p>
       <p>Stalk us at <a href="http://twitter.com/Platformsh">@PlatformSH</a></p>
     </section>
-
   </div>
-
 </div>
 
-<script src="lib/js/head.min.js"></script>
+
 <script src="js/reveal.js"></script>
 
 <script>
-
-  // Full list of configuration options available at:
-  // https://github.com/hakimel/reveal.js#configuration
-  Reveal.initialize({
-    controls: true,
-    progress: true,
-    history: true,
-    center: true,
-
-    transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-    // Optional reveal.js plugins
-    dependencies: [
-      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: 'plugin/zoom-js/zoom.js', async: true },
-      { src: 'plugin/notes/notes.js', async: true }
-    ]
-  });
-
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        hash: true,
+        controlsTutorial: false,
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+    });
 </script>
+
+<!-- Custom Reveal extension scripts. -->
+<script src="platform/classer.js"></script>
+<script src="platform/countup.js"></script>
+<script src="platform/usecase.js"></script>
 
 </body>
 </html>
